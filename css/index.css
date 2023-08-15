@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    outline: none;
+}
+
+/* Global styles */
+
+:root {
+    --max: 539px;
+    --sm: 540px;
+    --md: 768px;
+    --lg: 992px;
+    --xl: 1140px;
+    --xxl: 1200px;
+    --small: 14px;
+    --normal: 16px;
+    --ff-poppins: "Poppins", sans-serif;
+}
+
+body,
+html {
+    font-size: var(--small);
+    font-family: var(--ff-poppins);
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Global styles */
+
+/* Header */
+/* Header */
