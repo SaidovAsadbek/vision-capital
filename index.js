@@ -9,8 +9,12 @@ lists.forEach((list, i) => {
     });
 });
 
-// for (let i = 0; i < lists.length; i++) {
-//     lists[i].addEventListener("click", function () {
-//         lists[i].classList.remove("active");
-//     });
-// }
+const submenu = document.querySelector(".navbar-toggle");
+const submenuBtn = document.querySelector(".navbar-toggler");
+
+submenuBtn.addEventListener("click", () => {
+    submenu.classList.toggle("open");
+    submenu.classList.contains("open")
+        ? (document.body.style.overflow = "hidden")
+        : (document.body.style.overflow = "scroll");
+});

@@ -54,7 +54,7 @@ html {
 }
 
 .btn {
-    display: block;
+    display: inline-block;
     border-radius: 8px;
     padding: 12px 24px;
     cursor: pointer;
@@ -107,20 +107,30 @@ html {
     padding: 0;
     width: 50px;
     height: 40px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
+}
+
+.navbar .btn {
+    display: inline-block;
 }
 
 /* Global styles */
 
 /* Header */
 
+header {
+    position: relative;
+}
+
 .navbar-toggle a {
     font-size: var(--normal);
     font-weight: 500;
     display: block;
     position: relative;
+    padding: 8px;
+    border-radius: 5px;
 }
 
 .navbar-toggle li a::after {
@@ -185,11 +195,41 @@ html {
 .active {
     background-color: #8053ff;
     color: white;
+    transition: all 200ms ease-in;
 }
 
 @media (max-width: 767px) {
     .navbar .row {
         flex-direction: row-reverse;
+    }
+
+    .navbar .navbar-toggle {
+        position: absolute;
+        top: 125px;
+        left: -100%;
+        width: 100%;
+        background: #cccccc4f;
+        padding: 30px 15px 0 15px;
+        z-index: 1111;
+        height: 85vh;
+        display: block;
+        transition: all 200ms ease-in-out;
+    }
+
+    .navbar .navbar-toggle li {
+        margin-bottom: 20px;
+    }
+
+    .navbar-toggle li a::after {
+        display: none;
+    }
+
+    .navbar-toggle li a:active {
+        color: var(--white);
+    }
+
+    .navbar-toggle.open {
+        left: 0;
     }
 }
 
